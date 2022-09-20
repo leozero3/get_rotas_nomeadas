@@ -7,7 +7,7 @@ class InicialPage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(title: const Text('Inicial 1'),),
-      body: Center(),
+      body: const Center(),
     );
   }
 }
