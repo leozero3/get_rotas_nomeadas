@@ -6,6 +6,8 @@ import 'package:get_rotas_nomeadas/pages/envio_parametros/path_param_page.dart';
 import 'package:get_rotas_nomeadas/pages/envio_parametros/query_param_page.dart';
 import 'package:get_rotas_nomeadas/pages/home_page.dart';
 import 'package:get_rotas_nomeadas/pages/inicial/inicial_page1.dart';
+import 'package:get_rotas_nomeadas/pages/middlewares/middlewares_home_page.dart';
+import 'package:get_rotas_nomeadas/pages/middlewares/route_middlewares.dart';
 import 'package:get_rotas_nomeadas/pages/rota_nao_encontrada/rota_nao_encontrada_page.dart';
 
 void main() {
@@ -37,6 +39,13 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/arguments', page: () => const ArgumentsParamPage()),
             GetPage(name: '/pathParam', page: () => const PathParamPage()),
             GetPage(name: '/queryParam', page: () => const QueryParamPage()),
+          ],
+        ),
+        GetPage(
+          name: '/middlewares',
+          page: () => const MiddlewaresHomePage(),
+          middlewares: [
+            RouteMiddlewares(),
           ],
         ),
       ],
